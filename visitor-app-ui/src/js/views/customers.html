@@ -1,0 +1,22 @@
+<h2>Customer Details</h2>
+<oj-label for="username" id="lbl-username"></oj-label>
+Username : <oj-input-text id="username" value="{{username}}"></oj-input-text><br />
+First Name : <oj-input-text id="firstName" value="[[firstName]]"></oj-input-text><br />
+Last Name : <oj-input-text id="lastName" value="[[lastName]]"></oj-input-text><br />
+
+Customer Type : <oj-select-single 
+                id="customerType" 
+                data="[[customerTypeDataProvider]]"
+                 value="[[selectVal]]"
+                 on-value-changed="[[displayCustomerType]]">
+
+                </oj-select-single>
+<br />
+<!-- Views-->
+<br />
+<oj-bind-text value="[[username]]"></oj-bind-text><br />
+<oj-bind-text value="{{firstName}}"></oj-bind-text><br />
+<oj-bind-text value="{{lastName}}"></oj-bind-text><br />
+
+<oj-button on-oj-action="[[changeUsername]]">Save</oj-button><br/>
+<oj-button on-oj-action="[[changeFirstName]]">Change First Name</oj-button>
