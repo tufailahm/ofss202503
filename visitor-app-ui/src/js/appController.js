@@ -38,6 +38,8 @@ define(['knockout', 'ojs/ojcontext', 'ojs/ojmodule-element-utils', 'ojs/ojknocko
         { path: 'dashboard', detail: { label: 'Dashboard', iconClass: 'oj-ux-ico-bar-chart' } },
         { path: 'incidents', detail: { label: 'Incidents', iconClass: 'oj-ux-ico-fire' } },
         { path: 'hello', detail: { label: 'Hello', iconClass: 'oj-ux-ico-fire' } },
+        { path: 'listVisitors', detail: { label: 'List Visitors', iconClass: 'oj-ux-ico-fire' } },
+        { path: 'addVisitors', detail: { label: 'Add Visitors', iconClass: 'oj-ux-ico-fire' } },
         { path: 'customers', detail: { label: 'Customers', iconClass: 'oj-ux-ico-contact-group' } },
         { path: 'about', detail: { label: 'About', iconClass: 'oj-ux-ico-information-s' } }
       ];

@@ -249,6 +249,28 @@ Customer Type : <oj-select-single id="customerType" data="[[customerType]]" valu
 ---------------------------
 
 
+Case study : Spring boot Rest Endpoint
+
+http://localhost:9090/visitors
+
+OJET 	-->
+
+Hands on :
+
+visitorId
+visitorName
+purpose
+mobileNumber
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -1,3 +1,6 @@
+<head>
+<link rel="stylesheet" href="css/customers.css" type="text/css" />
+</head>
 <h2>Customer Details</h2>
 <oj-label for="username" id="lbl-username"></oj-label>
 Username : <oj-input-text id="username" value="{{username}}"></oj-input-text><br />
@@ -17,6 +20,24 @@ Customer Type : <oj-select-single
 <oj-bind-text value="[[username]]"></oj-bind-text><br />
 <oj-bind-text value="{{firstName}}"></oj-bind-text><br />
 <oj-bind-text value="{{lastName}}"></oj-bind-text><br />
+<oj-label for="num1" id="lbl-username">Select a Gender</oj-label>
 
-<oj-button on-oj-action="[[changeUsername]]">Save</oj-button><br/>
+<oj-radioset id="enabledRadioset">
+  <oj-option value="desktop">Male</oj-option>
+  <oj-option value="laptop">Female</oj-option>
+</oj-radioset>
+
+<br />
+<br />
+
+<oj-label for="num1" id="lbl-username">Visit Purpose</oj-label>
+
+<oj-checkboxset id="enabledCheckboxset">
+  <oj-option value="desktop">Personal </oj-option>
+  <oj-option value="laptop">Official</oj-option>
+  <oj-option value="tablet">Meeting</oj-option>
+</oj-checkboxset>
+
+
+<oj-button class="oj-button-full-width btn-danger" on-oj-action="[[changeUsername]]">Save</oj-button><br/>
 <oj-button on-oj-action="[[changeFirstName]]">Change First Name</oj-button>
