@@ -1,1 +1,49 @@
 <h2>Add Visitors</h2>
+
+<!-- Visitor Id visitorId -->
+
+<!-- Visitor Name visitorName-->
+
+<!-- Visitor Name purpose-->
+
+<!-- Visitor Name mobileNumber -->
+
+
+<oj-validation-group id="visitorForm" on-valid-changed="[[ doValidation ]]">
+  
+  <oj-form-layout max-columns="1" direction="column">
+
+    <oj-input-text id="visitorId"
+                   label-hint="Visitor ID"
+                   value="{{visitorId}}"
+                   required="true">
+    </oj-input-text>
+
+    <oj-input-text id="visitorName"
+                   label-hint="Visitor Name"
+                   value="{{visitorName}}"
+                   required="true"
+                   validators="[[ [visitorNamevalidator] ]]">
+    </oj-input-text>
+
+    <oj-input-text id="mobileNumber"
+                   label-hint="Mobile Number"
+                   value="{{mobileNumber}}"
+                   required="true"
+                   validators="[[ [mobileValidator] ]]">
+    </oj-input-text>
+
+    <oj-input-text id="purpose"
+                   label-hint="Purpose"
+                   value="{{purpose}}"
+                   required="true">
+    </oj-input-text>
+
+    <oj-button on-oj-action="[[saveVisitor]]" disabled="[[isFormInvalid]]">    		
+      Save Visitor
+    </oj-button>
+  <oj-button on-oj-action="[[updateVisitor]]" class="btn-danger" disabled="[[isFormInvalid]]">    		
+      Update Visitor
+    </oj-button>
+  </oj-form-layout>
+</oj-validation-group>

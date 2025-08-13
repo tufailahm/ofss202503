@@ -265,7 +265,50 @@ mobileNumber
 
 
 
+Here’s the correct mental model and a common best-practice order:
 
+1. Core Libraries First
+These are the foundational scripts that everything else may depend on.
+
+'knockout',
+'jquery',              // Only if you explicitly use jQuery
+2. Data Utilities & Providers
+Put these right after the core libraries if used.
+
+'ojs/ojarraydataprovider',
+'ojs/ojcollectiondataprovider',
+3. JET Component Modules
+These are the widgets/components you actually render in your view.
+
+Example:
+
+'ojs/ojinputtext',
+'ojs/ojselectsingle',
+'ojs/ojformlayout',
+'ojs/ojvalidationgroup',
+'ojs/ojbutton',
+Rule:
+If your HTML contains <oj-xyz>, you must have 'ojs/ojxyz' imported before that element is instantiated.
+
+4. JET Validators & Converters
+They don’t render directly but must be loaded before you try to use them.
+
+
+'ojs/ojasyncvalidator-length',
+'ojs/ojvalidator-regexp',
+'ojs/ojconverter-number',
+5. Custom Modules
+Place your own ViewModels, Models, and utilities at the bottom.
+
+'utils/helper',
+'models/VisitorModel',
+'models/VisitorCollection',
+
+
+Why This Order Matters
+AMD loader (RequireJS) in JET resolves dependencies in the order you declare them.
+
+If a component depends on Knockout (almost all of them do), KO must be loaded first.
 
 
 

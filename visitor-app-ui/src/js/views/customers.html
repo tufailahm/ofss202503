@@ -1,6 +1,13 @@
 <head>
 <link rel="stylesheet" href="css/customers.css" type="text/css" />
 </head>
+<oj-form-layout id="formLayoutOptions"
+  max-columns="2"
+ direction="column"
+ class="oj-formlayout-full-width"
+ user-assistance-density="compact"
+> 
+
 <h2>Customer Details</h2>
 <oj-label for="username" id="lbl-username"></oj-label>
 Username : <oj-input-text id="username" value="{{username}}"></oj-input-text><br />
@@ -41,3 +48,5 @@ Customer Type : <oj-select-single
 
 <oj-button class="oj-button-full-width btn-danger" on-oj-action="[[changeUsername]]">Save</oj-button><br/>
 <oj-button on-oj-action="[[changeFirstName]]">Change First Name</oj-button>
+
+</oj-form-layout>

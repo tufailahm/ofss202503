@@ -4,7 +4,9 @@ define([
   'ojs/ojinputtext',
   'ojs/ojselectsingle',
   'ojs/ojradioset',
-  'ojs/ojcheckboxset'],
+  'ojs/ojcheckboxset',
+  'ojs/ojformlayout'
+],
   function (ko, ArrayDataProvider) {
     function CustomerViewModel() {
       this.username = ko.observable("Rohan");
