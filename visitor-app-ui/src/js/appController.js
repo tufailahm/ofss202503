@@ -41,7 +41,10 @@ define(['knockout', 'ojs/ojcontext', 'ojs/ojmodule-element-utils', 'ojs/ojknocko
         { path: 'listVisitors', detail: { label: 'List Visitors', iconClass: 'oj-ux-ico-fire' } },
         { path: 'addVisitors', detail: { label: 'Add Visitors', iconClass: 'oj-ux-ico-fire' } },
         { path: 'customers', detail: { label: 'Customers', iconClass: 'oj-ux-ico-contact-group' } },
+        { path: 'visitorsInfo', detail: { label: 'Visitors', iconClass: 'oj-ux-ico-contact-group' } },
+
         { path: 'about', detail: { label: 'About', iconClass: 'oj-ux-ico-information-s' } }
+
       ];
 
       // Router setup

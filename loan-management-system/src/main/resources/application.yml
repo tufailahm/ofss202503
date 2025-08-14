@@ -6,7 +6,7 @@ management:
 spring:
   datasource:
     username: system
-    url: jdbc:oracle:thin:@10.120.93.4:1521:free
+    url: jdbc:oracle:thin:@10.120.126.242:1521:free
     driverClassName: oracle.jdbc.driver.OracleDriver
     password: root
   jpa:

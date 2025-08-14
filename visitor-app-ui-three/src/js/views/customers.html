@@ -1,0 +1,52 @@
+<head>
+<link rel="stylesheet" href="css/customers.css" type="text/css" />
+</head>
+<oj-form-layout id="formLayoutOptions"
+  max-columns="2"
+ direction="column"
+ class="oj-formlayout-full-width"
+ user-assistance-density="compact"
+> 
+
+<h2>Customer Details</h2>
+<oj-label for="username" id="lbl-username"></oj-label>
+Username : <oj-input-text id="username" value="{{username}}"></oj-input-text><br />
+First Name : <oj-input-text id="firstName" value="[[firstName]]"></oj-input-text><br />
+Last Name : <oj-input-text id="lastName" value="[[lastName]]"></oj-input-text><br />
+
+Customer Type : <oj-select-single 
+                id="customerType" 
+                data="[[customerTypeDataProvider]]"
+                 value="[[selectVal]]"
+                 on-value-changed="[[displayCustomerType]]">
+
+                </oj-select-single>
+<br />
+<!-- Views-->
+<br />
+<oj-bind-text value="[[username]]"></oj-bind-text><br />
+<oj-bind-text value="{{firstName}}"></oj-bind-text><br />
+<oj-bind-text value="{{lastName}}"></oj-bind-text><br />
+<oj-label for="num1" id="lbl-username">Select a Gender</oj-label>
+
+<oj-radioset id="enabledRadioset">
+  <oj-option value="desktop">Male</oj-option>
+  <oj-option value="laptop">Female</oj-option>
+</oj-radioset>
+
+<br />
+<br />
+
+<oj-label for="num1" id="lbl-username">Visit Purpose</oj-label>
+
+<oj-checkboxset id="enabledCheckboxset">
+  <oj-option value="desktop">Personal </oj-option>
+  <oj-option value="laptop">Official</oj-option>
+  <oj-option value="tablet">Meeting</oj-option>
+</oj-checkboxset>
+
+
+<oj-button class="oj-button-full-width btn-danger" on-oj-action="[[changeUsername]]">Save</oj-button><br/>
+<oj-button on-oj-action="[[changeFirstName]]">Change First Name</oj-button>
+
+</oj-form-layout>

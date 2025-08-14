@@ -17,7 +17,6 @@ define([
         self.mobileNumber = ko.observable('');
         self.purpose = ko.observable('');
 
-
         self.isFormInvalid = ko.observable(true);       //
         self.doValidation = (event) => {
             // 'valid' means all fields are good, 
@@ -26,8 +25,6 @@ define([
             console.log("event.detail.value :" + event.detail.value)
             self.isFormInvalid(event.detail.value !== 'valid');
         };
-
-
 
         // Mobile number validator
         self.mobileValidator = new RegExpValidator({

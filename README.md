@@ -316,6 +316,119 @@ If a component depends on Knockout (almost all of them do), KO must be loaded fi
 
 
 
+Use case : Get the data from REST API and display on OJET page
+
+
+
+http://localhost:9090/visitor			- GET
+
+
+
+
+
+names = ["riya","pooja","tarun"];
+
+
+OJET don't take raw arrays directly.
+
+
+
+
+Model and Collection
+---------------------------
+
+Use case : CRUD operations on any model
+
+Model and Collection
+
+src/js/models/VisitorModel.js
+
+define(['ojs/ojmodel'], function (oj) {
+    var VisitorModel = oj.Model.extend({
+        idAttribute: 'visitorId',
+        urlRoot: 'http://localhost:9090/visitors'
+    });
+    return VisitorModel;
+});
+
+
+src/js/models/VisitorCollection.js
+
+define(['ojs/ojmodel', 'models/VisitorModel'], function (oj, VisitorModel) {
+    var VisitorCollection = oj.Collection.extend({
+        url: 'http://localhost:9090/visitors',
+        model: VisitorModel
+    });
+    return VisitorCollection;
+});
+
+
+
+
+
+
+
+
+
+
+http://localhost:9090/visitors/119	- GET
+http://localhost:9090/visitors/119	- DELETE
+
+
+
+
+
+    function AddVisitorsViewModel(params) {
+..
+
+
+ var self = this;
+            // Router passed from main
+        self.router = params && params.parentRouter;
+
+
+..saveVisitor	
+
+alert(visitor.visitorName + " you are registered successfully");
+                self.router.go({ path: 'listVisitors' }); 
+
+
+
+
+-----------------
+
+Components in react
+
+
+class 
+functional
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
